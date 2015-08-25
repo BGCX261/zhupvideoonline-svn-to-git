@@ -1,0 +1,48 @@
+table,td,body {font-size: 12px;line-height:16px;color:#000000;}
+textarea,input,select {font-size: 12px;line-height:16px;color:#000000;}
+A:link {text-decoration: none; color: #000000;}
+A:visited {text-decoration: none; color: #000000;}
+A:active {text-decoration: none; color: #000000;}
+A:hover {text-decoration: underline; color: red}
+.gbkbox{width:100%; border-collapse:collapse; border:#48721d solid 1px;margin:12px 0;}
+.gbkboxtitle{height:30px;background:#d28415 url(../img/gbkboxtitlebg.gif) repeat-x; padding:4px; font-size:14px; font-weight:bold; color:#fff; vertical-align:middle;}
+.gbkboxc{background: #fff; padding:2px;vertical-align:top;}
+.gbksmt{background: #e8e8e8; border:#ccc solid 1px;}
+.admbox{background: #d0d0d0;border-collapse:collapse; border:#000 solid 1px; width:100%;}
+.admbox td{ padding:6px;}
+.admclose{width:15px; height:14px;background: url(../gbkimg/gb.jpg)}
+.listbox{background: #cee3f0; width:100%;}
+.listboxtd{padding:4px;border:#fff 1px dotted ;}
+.listboxhftd{background: #fffddd;color: #777;padding:4px;}
+.listboxtitle{background: #e0eef7; padding:4px; border-bottom:#adcadd 1px dotted ;}
+
+/*翻页显示区*/
+.tpage{
+    width: 100%;
+	padding: 2px;
+	margin: 2px;
+	border-top:#999999 solid 1px;
+	border-collapse:collapse; 
+	margin-top:6px; margin-bottom:6px;
+	background: #fff;
+	font-size:12px;
+	color: #999;
+	text-align:left; 
+	
+}
+.light {padding: 4px;}
+.light a:link,.light a:visited{
+    color:#4F6B72;
+    cursor:pointer; /*让光标显示手形*/
+}
+.light a:hover{
+    background:#f1f1f1;
+	color:#F00;
+    cursor:pointer; /*让光标显示手形*/
+}
+.light a{
+margin:0px;padding:0px;font-size:12px
+}
+.gray {padding: 4px;
+        color:#999;
+}

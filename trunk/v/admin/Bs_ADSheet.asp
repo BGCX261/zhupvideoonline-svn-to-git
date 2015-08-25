@@ -1,0 +1,82 @@
+<!--#include file="bsconfig.asp"-->
+<!--#include file="../Inc/Ubbcode.asp"-->
+<!--#include file="Inc/Function.asp"-->
+
+<%ADSheet=Trim(Request("ADSheet")) %>
+<%if Request.QueryString("no")="eshop" then
+set rs=server.createobject("ADODB.Recordset")
+sql="select * from main"
+rs.open sql,conn,3,3
+rs("ADSheet")=ubbcode(ADSheet)
+rs.update
+rs.close
+response.redirect "Bs_ADSheet.asp"
+end if
+sql="select * from main"
+Set rs_home= Server.CreateObject("ADODB.Recordset")
+rs_home.open sql,conn,1,1
+%>
+<script>
+function CheckForm()
+{
+  if (editor.EditMode.checked==true)
+	  document.myform.ADSheet.value=editor.HtmlEdit.document.body.innerText;
+  else
+	  document.myform.ADSheet.value=editor.HtmlEdit.document.body.innerHTML; 
+  if (document.myform.ADSheet.value=="")
+  {
+    alert("文章内容不能为空！");
+	editor.HtmlEdit.focus();
+	return false;
+  }
+  return true;  
+}
+setTimeout('loadForm()',1000); 
+function loadForm()
+{
+  editor.HtmlEdit.document.body.innerHTML=document.myform.ADSheet.value;
+  return true
+}
+</script>
+<!-- #include file="Inc/Head.asp" -->
+<%call checkmanage("36")%>
+<table align="center" class="a2">
+	<tr>
+		<td class="a1">广 告 宣 传 设 置</td>
+	</tr>
+	<tr class="a4">
+		<td>
+			<form method="POST" action="Bs_ADSheet.asp?no=eshop"  name="myform" onSubmit="return CheckForm();">
+			<table width="100%">
+				<tr> 
+				<td class="iptlab">信息设置</td>
+				<td class="ipt">
+<textarea name="ADSheet" cols="80" rows="15" id="ADSheet" style="display:none">
+<%
+if rs_home("html")=false then
+ADSheet=replace(rs_home("ADSheet"),"<br>",chr(13))
+ADSheet=replace(ADSheet,"&nbsp;"," ")
+else
+ADSheet=rs_home("ADSheet")
+end if
+response.write ADSheet
+%>
+</textarea>
+<iframe ID="editor" src="../editor1.asp" frameborder=1 scrolling=no width="700" height="405"></iframe>
+<!--<iframe ID="Editor" name="Editor" src="ubb/edit.htm?id=ADSheet" frameBorder="0" marginHeight="0" marginWidth="0" scrolling="No" style="height:320;width:100%"></iframe>-->
+</td>
+				</tr>
+				<tr> 
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+				</tr>
+				<tr> 
+					<td colspan="2" class="iptsubmit">
+<input type="submit" value=" 修 改 "	 name="cmdok"><input type="reset" value=" 重 写 " name="cmdcancel"></td>
+				</tr>
+			</table>
+			</form>
+		</td>
+	</tr>
+</table>
+<%htmlend%>

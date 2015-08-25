@@ -1,0 +1,37 @@
+<div id="wrapper">
+
+    <div id="ListContent">
+    
+        
+        <div id="positionbg">
+        
+                 <%If cnum(forumID)<>0 Then%>
+                 <div class="ClassNav">
+                      <div class="ClassTitle">分类导航</div>
+                      <div class="ClassList"><ul><%call getSubClass()%></ul></div>
+                 </div>
+                 <%End If%>
+        
+            <div id="position">当前位置：<a href="/">首页</a>&nbsp;&gt;&nbsp;<a href="list.asp?forumID=<%=forumID%>"><%=Application(systemkey&ForumID)%></a>&nbsp;&gt;&nbsp;列表</div>
+        </div>
+
+	     <div id="news">
+		     <%Call LieBiao '新闻列表%>
+		     <div id="pages"><%Response.write ShowPages(Pages,Page,"list.asp?forumID="&forumID&"&subclassID="&subclassID&"")%></div>
+         </div>
+	</div>
+
+	<div id="ListSide">
+    
+	     <div class="ListRightRecommend">
+		      <div class="ListRRTitle">精选推荐</div>
+		      <div class="ListRRList"><ul><%dy "recommend",""&ForumID&"",,10,40%></ul></div>
+         </div>
+	
+	     <div class="ListRightHotc">
+		      <div class="ListRHTitle">浏览排行</div>
+		      <div class="ListRHList"><ul><%dy "hotc",""&ForumID&"",,10,40%></ul></div>
+         </div>
+	</div>
+
+</div>

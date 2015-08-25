@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<site compile="2">
+	<index name="首页">
+		<module name="头部">header</module>
+		<module name="焦点图片">focus</module>
+		<module name="网站公告">notice</module>
+		<module name="联系我们">contact</module>
+		<module name="友情链接">link</module>
+		<module name="公司简介">about</module>
+		<module name="推荐产品">recommend</module>
+		<module name="新闻资讯">news</module>
+		<module name="最新产品">product</module>
+		<module name="底部">footer</module>
+		<module name="在线客服">service</module>
+	</index>
+	<about name="关于我们">
+		<module name="头部">header</module>
+		<module name="焦点图片">focus</module>
+		<module name="菜单">about_menu</module>
+		<module name="主体">about_main</module>
+		<module name="底部">footer</module>
+		<module name="在线客服">service</module>
+	</about>
+	<product name="产品展示" compile="2">
+		<module name="头部">header</module>
+		<module name="焦点图片">focus</module>
+		<module name="菜单">product_tree</module>
+		<module name="主体">product_main</module>
+		<module name="底部">footer</module>
+		<module name="在线客服">service</module>
+	</product>
+	<article name="资讯中心" compile="2">
+		<module name="头部">header</module>
+		<module name="焦点图片">focus</module>
+		<module name="菜单">article_tree</module>
+		<module name="主体">article_main</module>
+		<module name="底部">footer</module>
+		<module name="在线客服">service</module>
+	</article>
+	<recruit name="人才招聘">
+		<module name="头部">header</module>
+		<module name="焦点图片">focus</module>
+		<module name="联系我们">contact</module>
+		<module name="主体">recruit_main</module>
+		<module name="底部">footer</module>
+		<module name="在线客服">service</module>
+	</recruit>
+	<download name="下载中心">
+		<module name="头部">header</module>
+		<module name="焦点图片">focus</module>
+		<module name="联系我们">contact</module>
+		<module name="主体">download_main</module>
+		<module name="底部">footer</module>
+		<module name="在线客服">service</module>
+	</download>
+	<message name="留言板">
+		<module name="头部">header</module>
+		<module name="焦点图片">focus</module>
+		<module name="在线调查">research</module>
+		<module name="主体">message_main</module>
+		<module name="底部">footer</module>
+		<module name="在线客服">service</module>
+	</message>
+	<search name="搜索结果">
+		<module name="头部">header</module>
+		<module name="焦点图片">focus</module>
+		<module name="菜单">product_tree</module>
+		<module name="主体">search_main</module>
+		<module name="底部">footer</module>
+		<module name="在线客服">service</module>
+	</search>
+	<alert>
+		<module>header</module>
+		<module>alert_main</module>
+		<module>footer</module>
+	</alert>
+</site>

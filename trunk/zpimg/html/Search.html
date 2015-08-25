@@ -1,0 +1,26 @@
+<div id="positionbg">
+    <div id="position"><a href="/">米号官方网站</a>&nbsp;&gt;&nbsp;共搜到<span class="red bold"> <%=allcount%> </span>个结果</div>
+</div>
+
+<div id="wrapper">
+
+    <div id="content">
+	     <div id="news">
+	          <%Call LieBiao '新闻列表%>
+              <div id="pages"><%Response.write ShowPages(Pages,Page,"search.asp?kw="&kw&"")%></div>
+         </div>
+    </div>
+
+	<div id="side">
+	     <div class="RightRecommend">
+		      <div class="RRTitle">精选推荐</div>
+		      <div class="RRList"><ul><%dy "recommend","",,10,30%></ul></div>
+         </div>
+	
+	     <div class="RightHotc">
+		      <div class="RHTitle">浏览排行</div>
+		      <div class="RHList"><ul><%dy "hotc","",,10,30%></ul></div>
+         </div>
+	</div>
+
+</div>

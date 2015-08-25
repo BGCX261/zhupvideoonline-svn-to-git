@@ -1,0 +1,37 @@
+<html>
+<head>
+<title>js抽奖</title>
+</head>
+<head>
+<meta name="Keywords" content="51" />
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+</head>
+<body>
+<script type="text/javascript">
+var alldata = "何惠林,刘继宗,谢银风,谢婷娜,陈婷林,林秀惠,翁悦恋,曾洁莹,梁嘉敏,古冰仪,黄淑莹,郑妹,李晓萍,朱宏维,梁振成,徐鸿荣,许小红,赖天竹,崔彩华,曾钰延,马红燕,姚观森,冯琳茜,朱颖,吴东茹,何金霞,魏文彪,蔡楚炯,陈小玲,曾远玲,潘天鹏,黄美虹,肖锦成,刘文贞,林冰文,唐哲芸,林爱珠,张淑菲,吴洁婷,沈树铭,高培铿,黄映坚,盘伟怡,傅文兴,池钊群,黄业凯,谢汶彬,温裕恒,崔婉仪"	//抽奖的姓名，以,为分隔
+
+var alldataarr = alldata.split(",")
+var num = alldataarr.length-1
+var timer
+function change(){
+	document.getElementById("oknum").value = alldataarr[GetRnd(0,num)];
+}
+
+function start(){
+	clearInterval(timer);
+	timer = setInterval('change()',50);	//50（毫秒）为变换间隔，越小变换的越快
+}
+
+function ok(){
+	clearInterval(timer);
+}
+
+function GetRnd(min,max){
+	return parseInt(Math.random()*(max-min+1));
+}
+</script>
+模拟抽奖：<input type="text" id="oknum" name="oknum" value="" />
+<button onclick="start()" accesskey="s">开始(<U>S</U>)</button> 
+<button onclick="ok()" accesskey="o">停止(<U>O</U>)</button>
+</body>
+</html>

@@ -1,0 +1,55 @@
+
+<div id="wrapper">
+
+	<div id="dubcontent">
+    
+        <div id="positionbg">
+        <div id="position"><a href="/">首页</a>&nbsp;&gt;&nbsp;<a href="list.asp?forumID=<%=ForumID%>"><%=Application(systemkey&ForumID)%></a>&nbsp;&gt;&nbsp;<a href="list.asp?forumID=<%=ForumID%>&subclassID=<%=SubClassid%>"><%=subclassArray(subclassid)%></a>&nbsp;&gt;&nbsp;正文</div>
+         </div>
+
+         <div id="dubcontextbg">
+              <h1><%=Title%></h1>
+              <div id="newsinfo"><span class="blue"><%=Rs("Poster")%></span> <span class="gray">(<%=Rs("PostTime")%>)</span>&nbsp;&nbsp;浏览:<span class="blue"><%=Rs("ClickNum")%></span>&nbsp;&nbsp;评论:<span class="red"><%=Rs("ReplyNum")%></span></div>
+              <div id="context">
+                  <%call getart()%>
+              </div>
+				   <div class="m_wz5"><!-- 投票系统 
+                        <script language="javascript">
+                             var infoid = '<%=contextID%>';
+                             var classid = 'news';
+                        </script>
+                        <script language = "JavaScript" src ="mood/mood.js"></script>-->
+				   </div>
+              <div class="Toolsbg"><a href="javascript:history.back(1)">返回</a><a href="#top">跳至顶部</a></div>
+		 </div>
+
+         <div id="next"><%getPreNxt contextID,forumid,listpage '上下篇%></div>
+
+		 <div id="NewsRelated">
+			  <div id="NewsRelatedt">相关内容：</div>
+			  <ul><%call NewsRelated%></ul>
+		 </div>
+
+         <div id="pinglun">
+			  <div id="pinglunt">以下是网友对 <span class="blue"><%=Title%></span> 的评论：</div>
+			  <div id="pinglunj"><%call pinglun() '评论集%></div>
+              <div id="pinglunother">
+                   <div id="pinglunfy"><%Response.write ShowPages(Pages,Page,"context.asp?id="&contextID&"")%></div>
+                   <div id="pinglunym"><%Response.write("<span>[本主题共<font color='#cc0000'>"&allcount&"</font>条评论 | 每页显示<font color='#cc0000'>"&contextPageSize&"</font>条评论]")%></div>
+              </div>
+              <div id="pinglunfb"><%call pinglunfb() '发表评论%></div>
+         </div>
+    </div>
+
+	<div id="dubside">  	
+	     <div class="dubRightRecommend">
+		      <div class="RRTitle">精选推荐</div>
+		      <div class="RRList"><ul><%dy "recommend",""&ForumID&"",,10,40%></ul></div>
+         </div>
+	     <div class="dubRightHotc">
+		      <div class="RHTitle">浏览排行</div>
+		      <div class="RHList"><ul><%dy "hotr",""&ForumID&"",,10,40%></ul></div>
+         </div>
+    </div>
+
+</div>

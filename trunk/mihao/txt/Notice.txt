@@ -1,0 +1,2 @@
+marqueeContent[0]='<a href="http://www.a-ping.net/" target="_blank">阿平摄影网站公开测试，欢迎围观</a>';
+marqueeContent[1]='<a href="http://www.a-ping.net" target="_blank">内测开始</a>';

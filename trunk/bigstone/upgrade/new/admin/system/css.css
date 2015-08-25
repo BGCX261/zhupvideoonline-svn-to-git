@@ -1,0 +1,83 @@
+@charset "utf-8";
+
+html,body{padding:0;margin:0;font-size:12px;}
+a:link,a:visited,a:active{text-decoration:none;}
+a:hover{text-decoration:underline;}
+div{word-break:break-all;}
+img{border:none;}
+form,ul,li{margin:0;padding:0;}
+.clear{clear:both;}
+
+#login{background:#69C;}
+#login .box{position:relative;width:350px;height:230px;margin:150px auto;background:url(images/login_background.jpg);border:3px solid #FFF;}
+#login .box div{position:absolute;top:150px;left:70px;}
+#login .box td{height:30px;text-align:center;}
+#login .box .text{width:120px;height:16px;}
+
+#header{position:relative;width:100%;height:50px;border-bottom:3px solid #FFF;background:#C00;}
+#left{float:left;width:180px;border-right:3px solid #FFF;background:#69C;}
+#right{float:left;width:100%;height:100%;background:#DDEEF2;}
+#footer{position:absolute;bottom:0px;right:0px;width:1px;height:1px;}
+
+#header .link{position:absolute;right:10px;top:5px;}
+#header .link a{margin:5px;font-size:13px;font-weight:bold;color:#FFF;}
+#nav{position:absolute;left:200px;bottom:0;}
+#nav li{float:left;list-style:none;background:#FFF;padding:5px 10px;margin:0 2px;}
+#nav li a{font-size:14px;font-weight:bold;color:#900;}
+#nav li a:hover{color:#F00;}
+
+#left ul{list-style:none;margin:5px;width:170px;font-size:14px;font-weight:bold;}
+#left li a{display:block;height:24px;text-decoration:none;padding:8px 0 0 10px;}
+#left li a:link,#left li a:visited{background:url(images/nav_left.gif);color:#8BADCF;}
+#left li a:hover{background:url(images/nav_left.gif) 0 -32px;color:#627EB7;}
+#version{position:absolute;left:10px;bottom:5px;color:#666;}
+#version a{color:#666;}
+
+#right iframe{width:100%;height:100%;border:0;}
+
+#main{overflow-x:hidden;overflow-y:hidden;background:#DDEEF2;padding:10px 10px 0 10px;}
+#main .here{padding:5px 10px;border-bottom:10px solid #DDEEF2;font-size:14px;font-weight:bold;background:#FFF;}
+#main .block{background:#FFF;border-bottom:10px solid #DDEEF2;}
+#main table{border-collapse:collapse;}
+#main td{padding:5px 10px;border-right:1px solid #DDEEF2;border-bottom:1px solid #DDEEF2;}
+#main .red{color:#C00;cursor:pointer;}
+#main .text{width:220px;margin:0;}
+#main .area{font-size:13px;width:300px;height:80px;}
+#main .button{padding:10px;text-align:center;}
+#main .content{line-height:20px;padding:10px;}
+#main .sheet td{text-align:center;}
+#main a{color:#36C;cursor:pointer;}
+#main .editor td{padding:0;border:none;}
+#main .f_l{float:left;}
+#main .cat_select{width:150px;}
+
+#main .page_link{position:relative;height:40px;}
+#main .page_link .in{position:absolute;top:10px;right:20px;}
+#main .page_link span,#main .page_link a{display:block;float:left;line-height:25px;font-size:13px;color:#36C;margin:0 10px 0 0;}
+#main .page_link form{float:left;}
+
+#main .box{position:absolute;display:none;border:5px solid #69C;background:#FFF;overflow:hidden;z-index:9;}
+#main .box td{border:none;text-align:center;}
+#main .box .head{height:30px;border-bottom:1px dashed #69C;margin:0 0 8px 0;}
+#main .box .close{position:absolute;top:10px;right:10px;color:#C00;font-weight:bold;cursor:pointer;}
+#main .box .title{position:absolute;top:8px;left:10px;font-size:14px;font-weight:bold;}
+#main .box .main{margin:40px 0 0 0;text-align:center;font-size:14px;font-weight:bold;}
+#main .box .line{width:80%;height:10px;margin:15px auto;border:1px solid #36C;}
+#main .box .rate{width:0;height:100%;background:#69C;}
+#main #ifr_hid,#main #deal{display:none;width:10px;height:10px;}
+
+#main .pic{width:50px;height:50px;}
+#main .pic .unit{width:50px;height:50px;overflow:hidden;}
+#main .pic .unit table{width:50px;height:50px;border:0;text-align:center;vertical-align:middle;}
+#main .pic .unit td{padding:0;border:none;}
+#main .pic .unit img{max-width:50px;max-height:50px;}
+
+#main .img{width:160px;height:160px;}
+#main .img .unit{width:160px;height:160px;overflow:hidden;}
+#main .img .unit table{width:160px;height:160px;border:0;text-align:center;vertical-align:middle;}
+#main .img .unit td{padding:0;border:none;}
+#main .img .unit img{max-width:160px;max-height:160px;}
+
+#main .lin_img{width:88px;height:31px;}
+#main .fil_upl{padding:5px 10px;}
+#main .fil_upl span{font-size:14px;font-weight:bold;}
